@@ -16,4 +16,8 @@ defmodule TwoSumTest do
   test '[3,3] with target 6 gets [0,1]' do
     assert TwoSum.call([3, 3], 6) == [0, 1]
   end
+
+  test '[3,3] with target 4 gets []' do
+    assert TwoSum.call([3, 3], 4) == []
+  end
 end

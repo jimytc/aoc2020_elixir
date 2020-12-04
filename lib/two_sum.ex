@@ -3,7 +3,9 @@ defmodule TwoSum do
     internal(numbers, target, 0, %{}) || []
   end
 
-  defp internal([], _target, _index, _lookup) do [] end
+  defp internal([], _target, _index, _lookup) do
+    []
+  end
 
   defp internal(numbers, target, index, lookup) do
     [head | tail] = numbers
