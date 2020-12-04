@@ -1,8 +1,10 @@
 defmodule Day01 do
-  def with_file(file_path) do
+  def two_sum(file_path) do
     numbers = read_to_list(file_path)
-    TwoSum.call(numbers, 2020)
-    |> Enum.reduce(1, fn (index, acc) -> acc * Enum.at(numbers, index) end)
+    numbers
+    |> TwoSum.call(2020)
+    |> Enum.map(&Enum.at(numbers, &1))
+    |> Enum.reduce(1, fn (number, acc) -> acc * number end)
   end
 
   defp read_to_list(file_path) do
