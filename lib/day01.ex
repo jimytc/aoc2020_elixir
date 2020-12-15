@@ -22,8 +22,7 @@ defmodule Day01 do
   end
 
   defp read_to_list(file_path) do
-    {:ok, body} = File.read(file_path)
-    String.split(body)
+    Input.read(file_path)
     |> Enum.map(&String.to_integer/1)
   end
 end

@@ -20,9 +20,7 @@ defmodule Day02 do
   end
 
   defp load_password_records(file_path) do
-    {:ok, body} = File.read(file_path)
-
-    String.split(body, "\n")
+    Input.read(file_path, "\n")
   end
 
   defp transform_with_word_count_constraint(records) do
