@@ -1,8 +1,4 @@
 defmodule Day03 do
-  defmodule Slope do
-    defstruct x: 0, y: 0
-  end
-
   def part_one(file_path) do
     read_map(file_path)
     |> count_trees(%Coordination.Point{x: 0, y: 0}, %Coordination.Offset{x: 3, y: 1})
